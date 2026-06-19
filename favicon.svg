@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="方寸製作所">
+  <rect x="2" y="2" width="60" height="60" fill="#F4EFE6" stroke="#161413" stroke-width="4"/>
+  <rect x="2" y="2" width="30" height="30" fill="#E23B2E"/>
+  <circle cx="47" cy="17" r="13" fill="#2456B3"/>
+  <path d="M17 62 L2 37 L32 37 Z" fill="#F2C200"/>
+  <rect x="32" y="32" width="30" height="30" fill="none"/>
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#161413" stroke-width="4"/>
+  <line x1="32" y1="2" x2="32" y2="62" stroke="#161413" stroke-width="4"/>
+  <line x1="2" y1="32" x2="62" y2="32" stroke="#161413" stroke-width="4"/>
+</svg>
