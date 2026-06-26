@@ -1,0 +1,45 @@
+/* 方寸製作所 — header 會員/購物車 + 購物車側欄 + 會員中心頁(addon) */
+.nav-links .acct-link,.nav-links .cart-toggle{display:inline-flex;align-items:center;gap:.4rem;background:none;border:0;cursor:pointer;color:var(--ink);font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.06em;padding:.3rem .2rem;line-height:1}
+.nav-links .cart-toggle{position:relative}
+.nav-links .acct-link svg,.nav-links .cart-toggle svg{width:22px;height:22px}
+.nav-links .acct-link:hover,.nav-links .cart-toggle:hover{color:var(--red)}
+.cart-badge{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 4px;background:var(--red);color:#fff;font-size:11px;font-weight:800;border:2px solid var(--ink)}
+.cart-overlay{position:fixed;inset:0;background:rgba(22,20,19,.5);opacity:0;visibility:hidden;transition:.3s;z-index:200}
+.cart-overlay.show{opacity:1;visibility:visible}
+.cart-drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,92vw);background:var(--paper);border-left:var(--bw) solid var(--ink);transform:translateX(100%);transition:transform .35s ease;z-index:210;display:flex;flex-direction:column}
+.cart-drawer.open{transform:translateX(0)}
+.cd-head{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 1.4rem;border-bottom:var(--bw) solid var(--ink)}
+.cd-head h2{font-family:var(--display);text-transform:uppercase;font-size:1.3rem;margin:0}
+.cd-close{background:none;border:0;cursor:pointer;color:var(--ink);display:inline-flex;padding:.3rem}
+.cd-close svg{width:24px;height:24px}
+.cd-body{flex:1;overflow:auto;padding:1.6rem 1.4rem}
+.cd-empty{text-align:center;margin-top:2rem;line-height:1.9}
+.cd-foot{border-top:var(--bw) solid var(--ink);padding:1.2rem 1.4rem}
+.cd-total{display:flex;justify-content:space-between;font-weight:800;font-family:var(--display);margin-bottom:1rem;text-transform:uppercase}
+.mc-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--ink);color:var(--paper);font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;border:var(--bw) solid var(--ink);padding:.85rem 1.6rem;cursor:pointer;transition:.2s;font-size:.95rem}
+.mc-btn:hover{background:var(--red)}
+.cd-foot .mc-btn{width:100%}
+.mc-wrap{max-width:var(--maxw);margin:0 auto;padding:2.4rem 24px 4rem}
+.mc-crumb{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;opacity:.7;margin-bottom:1.4rem}
+.mc-crumb a:hover{color:var(--red)}
+.mc-title{font-family:var(--display);text-transform:uppercase;font-size:clamp(2.2rem,6vw,4rem);margin:0 0 .4rem}
+.mc-sub{max-width:54ch;margin:0 0 2.4rem;font-size:1.1rem}
+.mc-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin-bottom:1rem}
+.mc-card{border:var(--bw) solid var(--ink);background:var(--paper-2);padding:1.8rem;box-shadow:var(--shadow-sm)}
+.mc-card h2{font-family:var(--display);text-transform:uppercase;font-size:1.4rem;margin:0 0 1.2rem}
+.mc-card label{display:block;font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:.74rem;letter-spacing:.08em;margin-bottom:1rem}
+.mc-card input{display:block;width:100%;margin-top:.4rem;padding:.75rem .8rem;border:var(--bw) solid var(--ink);background:var(--paper);font-family:var(--tc);font-size:15px}
+.mc-card input:focus{outline:none;background:#fff}
+.mc-h2{font-family:var(--display);text-transform:uppercase;font-size:clamp(1.6rem,4vw,2.4rem);margin:2.4rem 0 1.4rem}
+.mc-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-bottom:1rem}
+.mc-benefit{border:var(--bw) solid var(--ink);padding:1.4rem;background:var(--paper)}
+.mc-benefit svg{width:32px;height:32px;margin-bottom:.8rem}
+.mc-benefit h3{font-size:1.1rem;margin:0 0 .4rem}
+.mc-benefit p{margin:0;font-size:.92rem}
+.mc-orders{border:var(--bw) solid var(--ink);background:var(--yellow);padding:2rem;text-align:center;margin-top:1.6rem}
+.mc-orders h2{font-family:var(--display);text-transform:uppercase;margin:0 0 .6rem}
+.mc-orders p{margin:0 0 1.4rem}
+.addon-toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,150%);background:var(--ink);color:var(--paper);padding:.9rem 1.5rem;font-weight:700;z-index:300;transition:transform .4s;border:var(--bw) solid var(--ink)}
+.addon-toast.show{transform:translate(-50%,0)}
+@media(max-width:760px){.mc-grid{grid-template-columns:1fr}.mc-benefits{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.mc-benefits{grid-template-columns:1fr}}
